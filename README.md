@@ -80,3 +80,4 @@ Pour l'architecture, on a les composants suivants :
 - user, pour accéder aux informations de l'utilisateur
 - user-list, pour accéder à la liste des utilisateurs
   
+![](front_back.png)
