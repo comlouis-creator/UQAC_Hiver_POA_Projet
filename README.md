@@ -1,3 +1,39 @@
+<h1 align="center">API REST du gestionnaire d'associations (Back)</h1>
+
+## Exigences
+
+- Node.js
+
+## En cours d'exécution
+
+```bash
+npm run build
+npm run start
+```
+
+Le Back-End se trouve dans le dossier fr-administration (équivalent au backend.zip avec le dossier node_modules dedans).
+
+Le développement du Back-End est fait avec NestJS.
+Le langage TypeScript est utilisé dans le but de gérer les controllers, services et modules.
+
+La description des APIs de la gestion des associations de notre projet est disponible à l’adresse suivante (une fois que le back-end est lancé) :
+http://localhost:3000/api
+
+## Architecture du projet 🏛️
+
+Sur http://localhost:3000/api on peut trouver plusieurs rubriques comme 
+- users
+- associations avec la possibilité de 
+- POST (ajouter) des utilisateurs
+- de GET pour les visualiser. Il y a également des 
+- getters 
+- des setters 
+- ainsi que la possibilité de supprimer les utilisateurs et associations par exemple. 
+- On peut aussi récupérer les identifiants et membres d'associations.
+
+Dans fr-administration il y a un dossier source et un dossier test qui contient les fichiers .sh en partie.
+Dans le fichier source on peut trouver 5 services : associations, auth, minutes, roles et users.
+
 ## Navigation dans le front end (Description à titre informatif, pas vraiment utile en soit pour le projet de POA)
 
 Le front-end se trouve dans le dossier fr-administration-front de ce dépôt.
@@ -43,5 +79,4 @@ Pour l'architecture, on a les composants suivants :
 - signin, pour créer un nouvel utilisateur
 - user, pour accéder aux informations de l'utilisateur
 - user-list, pour accéder à la liste des utilisateurs
-
-Ici fr-administration est équivalent au backend.
+  
