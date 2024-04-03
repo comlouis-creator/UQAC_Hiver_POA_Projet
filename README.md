@@ -34,7 +34,7 @@ Sur http://localhost:3000/api on peut trouver plusieurs rubriques comme
 Dans fr-administration il y a un dossier source et un dossier test qui contient les fichiers .sh en partie.
 Dans le fichier source on peut trouver 5 services : associations, auth, minutes, roles et users.
 
-## Navigation dans le front end (Description à titre informatif, pas vraiment utile en soit pour le projet de POA)
+<h1 align="center">Navigation dans le front end (Description à titre informatif comme celle du Back, pas vraiment utile en soit pour le projet de POA) </h1>
 
 Le front-end se trouve dans le dossier fr-administration-front de ce dépôt.
 
