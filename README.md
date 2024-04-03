@@ -4,7 +4,7 @@
 
 - Node.js
 
-## En cours d'exécution
+## En cours d'exécution (dans le dossier associé au back)
 
 ```bash
 npm run build
@@ -41,7 +41,7 @@ Le front-end se trouve dans le dossier fr-administration-front de ce dépôt.
 Pour le développement du Front-End, cela est fait avec Angular. 
 Les langages utilisés TypeScript, HTML, et CSS afin de gérer les connexions, l’affichage de texte, l’affichage des boutons, et l’esthétique du site web. 
 
-Le site est disponible à l’adresse suivante (une fois que le back-end et le front-end sont lancés) :
+Le site est disponible à l’adresse suivante après ng serve dans le dossier du front (une fois que le back-end et le front-end sont lancés) :
 http://localhost:4200
 
 Cette adresse amène directement sur la page de connexion :
