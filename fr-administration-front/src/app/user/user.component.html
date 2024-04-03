@@ -1,0 +1,58 @@
+<app-nav></app-nav>
+<div id="root" *ngIf="dataSource!=undefined">
+    <form [formGroup]="checkChange" (ngSubmit)="updateUser()">
+        <!-- <div class="infoArea">
+            <table>
+                <h1> Information de l'utilisateur</h1>
+                <tr><u>Id </u>: <a id="userId">{{userId}} </a></tr>
+                <tr><u>Firstname </u>:<a id="userFirstname"> {{firstNameLastKnownValue}}</a></tr>
+                <tr><u>Lastname</u> : <a id="userLastname">{{lastNameLastKnownValue}}</a></tr>
+                <tr><u>Age </u> : {{ageLastKnownValue}}</tr>
+            </table>
+        </div> -->
+        <div class="infoArea">
+            <h1> Information de l'utilisateur</h1>
+            <div class="row">
+                <div class="typeCol">Identifiant</div>
+                <div class="infoCol" id="userId">{{userId}}</div>
+            </div>
+        
+            <div class="row">
+                <div class="typeCol">Prénom</div>
+                <div class="infoCol" id="userFirstname"> {{firstNameLastKnownValue}}</div>
+            </div>
+            
+            <div class="row">
+                <div class="typeCol">Nom de famille</div>
+                <div class="infoCol" id="userLastname">{{lastNameLastKnownValue}}</div>
+            </div>
+        
+            <div class="row">
+                <div class="typeCol">Âge</div>
+                <div class="infoCol">{{ageLastKnownValue}}</div>
+            </div>
+        
+        </div>
+            <!-- <p></p>
+            <p></p> -->
+        <table *ngIf="">
+            <h1> Formulaire de modification</h1>
+            <div class="modifArea" *ngIf="">
+                <p> Prénom </p>
+                <input id="chgFirstName" formControlName="checkChangeFirstName" type="text" [(ngModel)]="dataSource.firstname" />
+           
+                <p> Nom de famille </p>
+                <input id="chgLastName" formControlName="checkChangeLastName" type="text" [(ngModel)]="dataSource.lastname" />
+            
+                <p> Âge </p>
+                <input formControlName="checkChangeAge" type="number" [(ngModel)]="dataSource.age" />
+                <button id="submit" type="submit" [disabled]="checkDisable()"> Soumettre les modifications </button>
+            </div>
+        </table>
+
+        <button id="removeButton" type="submit" *ngIf="" (click)="deleteAccount()"> Supprimer son compte </button>
+        
+    </form>
+
+</div>
+

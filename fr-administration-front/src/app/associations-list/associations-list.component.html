@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+
+<!-- <button (click)="createAssociation()">
+    <span> Creation page</span>
+ </button> -->
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let assoc"> {{assoc.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateOfCreation">
+        <th mat-header-cell *matHeaderCellDef> date of creation </th>
+        <td mat-cell *matCellDef="let assoc"> {{assoc.dateOfCreation | date: 'dd/MM/yyyy'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="members">
+        <th mat-header-cell *matHeaderCellDef> Members </th>
+        <td mat-cell *matCellDef="let assoc"> {{prettyPrintMembers(assoc.members)}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/associations',row.name]"> </tr>
+</table>

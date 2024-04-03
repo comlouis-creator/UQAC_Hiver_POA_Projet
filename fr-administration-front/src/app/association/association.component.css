@@ -1,0 +1,17 @@
+table {
+   
+    background-color: rgb(231, 213, 238);
+    width: 400px;
+    padding: 5px;
+    margin: 20px;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  u{
+      font-size: large;
+  }
+  div{
+    display:grid;
+  align-items:center;
+  justify-content:center;
+  }

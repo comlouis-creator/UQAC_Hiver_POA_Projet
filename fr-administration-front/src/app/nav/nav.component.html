@@ -1,0 +1,19 @@
+<mat-toolbar class="navbar" color="primary">
+    <img src="" alt="">
+    <ul class="nav no-search">
+      <li class="nav-item"><a *ngIf="isLogged" (click)="getUsers()">Utilisateurs</a></li>
+      <li class="dropdown" >
+        <a *ngIf="isLogged">Associations <i class="fa fa-caret-down"></i></a>
+        <div class="dd">
+          <div id="up_arrow"></div>
+          <ul>
+            <li><a href="/associationCreation">Créer Association</a></li>
+            <li><a (click)="getAssociations()">Voir toutes les associtations</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item"><a *ngIf="isLogged" (click)="logout()">Deconnexion</a></li>
+      <img class="search-icon" id="search-icon" *ngIf="isLogged" (click)="search()" src="../../assets/search.png">
+      <li class="nav-item"><a *ngIf="isLogged" routerLink="/signin">Signin</a></li>
+    </ul>
+  </mat-toolbar>

@@ -1,0 +1,44 @@
+<app-nav></app-nav>
+
+<div *ngIf="dataSource!=undefined">
+    <form [formGroup]="checkChange" (ngSubmit)="updateAssociation()">
+        <div>
+        <table>
+
+            <p><u>name</u>  : {{nameLastKnownValue}} </p>
+            <div *ngIf="isModificationEnable()">
+                <input formControlName="checkChangeName" type="text" [(ngModel)]="dataSource.name" />
+                <p> Modification du champs name </p>
+            </div>
+
+        
+            <p> <u> date of creation </u>: {{dateOfCreation | date: 'dd/MM/yyyy'}} </p>
+        
+        
+            <p> <u>Detail des différents membres</u></p>
+            <table >
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Age</th>
+                  <th>Role</th>
+                </tr>
+           <tr *ngFor ="let member of dataSource.members; let i = index">
+               <td> {{member.firstname }}</td>
+               <td> {{member.lastname}}</td>
+               <td> {{member.age}}</td>
+               <td> {{member.role}}</td>
+                </tr>
+        </table>
+        </table>
+        
+        <button *ngIf="isModificationEnable()" type="submit" [disabled]="checkDisable()"> Soumettre les modifications </button>
+
+    </div>
+    </form>
+        <button *ngIf="!isMember()" (click) ="inscription()"> Je m'inscrit </button>
+        <input *ngIf="!isMember()" type="text" [(ngModel)]="incomingRoleName" />
+        <button *ngIf="isMember()" (click)="quitAssoc()"> quitter l'association </button>
+        <button *ngIf="isMember()" (click)="removeAssoc()"> Supprimer association </button>
+</div>
+

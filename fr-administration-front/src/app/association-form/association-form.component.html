@@ -1,0 +1,101 @@
+<app-nav></app-nav>
+
+
+<!-- <div>
+    <li>
+        <p>Nom de l'association :</p>
+        <input type="string" id="assocName" placeholder="Nom de l'association" />
+    </li>
+    <li>
+        <p>Votre Rôle :</p>
+        <input type="string" id="role" placeholder="Votre rôle" />
+    </li>
+    <li>
+        <p>Utilisateur :</p>
+        <input type="number" id="username" placeholder="Identifiant" />
+    </li>
+    <li>
+        <p> Role :</p>
+        <input type="string" id="userRole" placeholder="Rôle de l'utilisateur" />
+    </li>
+    <button (click)="addMember()">Ajouter Membre</button>
+
+
+</div>
+<button type="submit" (click)="createAssoc()"> Créer une association </button> -->
+
+<div id="assoc">
+ 
+    <div class="assoc-form">
+    
+        <form>
+            <h1>Créer une association</h1>
+            <div class="content">
+                <div class="input-field">
+                    <input type="text" name="assocName" id="assocName" placeholder="nom de l'association" />
+                </div>
+                <div class="input-field">
+                    <input type="text" name="role" id="role" placeholder="Votre rôle" />
+                </div>
+                <h2>Procès verbal</h2>
+                <div>
+                    <div class="input-field-line">
+
+                        <div class="input-field">
+                            <input type="text" name="vp_content" id="vp_content" placeholder="Contenu" />
+                        </div>
+                        <div class="input-field">
+                            <input type="date" name="vp_date" id="vp_date" placeholder="Date" />
+                        </div>
+                    </div>
+                </div>
+                <h2>Ajouter Un membre</h2>
+                <div>
+                    <div class="input-field-line">
+
+                        <div class="input-field">
+                            <input type="number" name="username" id="username" placeholder="Identifiant" />
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="userRole" id="userRole" placeholder="Rôle" />
+                        </div>
+                    </div>
+                    <div class="action" id="addmemberdiv">
+                        <a id="addmemberbtn" (click)="addMember()"><button>Ajouter Membre</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action">
+                <a ><button id="createassocBtn" (click)="createAssoc()"> Créer une association </button></a>
+            </div>
+        </form>
+    
+    </div>
+    
+    <div class="members">
+        <h1>Membres ajoutés à l'association</h1>
+        <table mat-table [dataSource]="assocMembers" class="mat-elevation-z8" >
+    
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> id </th>
+                <td mat-cell *matCellDef="let user" > {{user.id}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nom </th>
+                <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="role">
+                <th mat-header-cell *matHeaderCellDef> Rôle </th>
+                <td mat-cell *matCellDef="let user"> {{user.role}} </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/user',row.id]"
+            routerLinkActive="active"></tr>
+        </table>
+    </div>
+
+</div>
